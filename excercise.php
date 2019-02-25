@@ -66,7 +66,13 @@ class UglyBoss extends Supervisor implements Boss
     }
 
 }
-
+trait active
+{
+    public function defineYourself()
+    {
+        return get_class($this);
+    }
+}
 $easyBoss = new EasyBoss();
 $uglyBoss = new UglyBoss();
 
@@ -83,3 +89,8 @@ echo "<br>";
 var_dump($easyBoss->checkValidSlogan()); // true
 echo "<br>";
 var_dump($uglyBoss->checkValidSlogan()); // true
+
+echo "<br>";
+echo 'I am ' . $easyBoss->defineYourself(); 
+echo "<br>";
+echo 'I am ' . $uglyBoss->defineYourSelf();
