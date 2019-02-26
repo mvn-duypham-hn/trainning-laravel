@@ -22,7 +22,9 @@ class EasyBoss extends Supervisor implements Boss
         $slogan = $this->slogan;
         $a = "after";
         $b = "before";
-        if (strpos($slogan, $a) || strpos($slogan, $b)) {
+        if (strpos($slogan, $a) 
+            || strpos($slogan, $b)
+        ) {
             return true;
         } else {
             return false;
