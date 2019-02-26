@@ -23,9 +23,9 @@ class HandleString
     {
         $a = "after";
         $b = "before";
-        if (is_null($string) ||
-            (strlen($string) >= 50 && !strpos($string, $a)) ||
-            (strlen($string) >= 50 && !strpos($string, $a) && strpos($string, $b))
+        if (is_null($string) 
+            || (strlen($string) >= 50 && !strpos($string, $a)) 
+            || (strlen($string) >= 50 && !strpos($string, $a) && strpos($string, $b))
         ) {
             return true;
         } else {
