@@ -17,7 +17,7 @@ session_start();
 <body>
 	<div class="container">
 		<h2>Login form</h2>
-		<form method="post" action="test1.php">
+		<form method="post" action="Login.php">
 			<div class="form-group">
 				<label for="email">Email:</label> <input type="email"
 					class="form-control" placeholder="Enter email" name="email"
@@ -36,19 +36,11 @@ session_start();
 			</div>
 			<button type="submit" class="btn btn-primary" name="submit">Login</button>
 		</form>
-
-
-
 	</div>
-	<?php
+<?php
 require ("Account.php");
 
 $account = new Account();
-
-if (isset($_POST['remember'])) {
-    setcookie('user', $account->email, time() + 3600, '/', '', 0, 0);
-    setcookie('pass', $account->password, time() + 3600, '/', '', 0, 0);
-}
 
 if (isset($_POST["submit"])) {
     $account->email = $_POST["email"];
@@ -56,13 +48,16 @@ if (isset($_POST["submit"])) {
     if (isset($_POST['remember'])) {
         setcookie('user', $account->email, time() + 3600, '/', '', 0, 0);
         setcookie('pass', $account->password, time() + 3600, '/', '', 0, 0);
+    } else {
+        setcookie('user', $account->email, time() - 3600, '/', '', 0, 0);
+        setcookie('pass', $account->password, time() - 3600, '/', '', 0, 0);
     }
     if (($account->Check()) === true) {
 
         header('Location: LoginSuccess.php');
     } else {
 
-        header('Location: test1.php');
+        header('Location: Login.php');
     }
 }
 ?>

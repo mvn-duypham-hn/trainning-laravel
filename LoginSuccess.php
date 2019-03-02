@@ -9,7 +9,7 @@ echo 'Dang nhap thanh cong!';
 <title>LoginSuccess!</title>
 
 <body>
-	<form method="POST" action="loginSuccess.php">
+	<form method="POST" action="LoginSuccess.php">
 
 
 
@@ -21,7 +21,7 @@ echo 'Dang nhap thanh cong!';
 <?php
 if (isset($_POST["btn_submit"])) {
     session_destroy;
-    header('Location: test1.php');
+    header('Location: Login.php');
    }
 
 ?>
