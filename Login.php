@@ -1,8 +1,5 @@
 <?php
 session_start();
-if(isset($_COOKIE['remember'])){
-    explode(',', $_COOKIE['remember']);
-}
 ?>
 <!DOCTYPE html>
 <form id="myForm" method="post" action="Login.php">
@@ -19,7 +16,8 @@ if(isset($_COOKIE['remember'])){
             }
         }
     }
-    ?>' required>
+    ?>'
+    required>
     <br>
     Password:<br>
     <input id="password" type="text" name="password" value='<?php
@@ -34,9 +32,23 @@ if(isset($_COOKIE['remember'])){
             }
         }
     }
-    ?>' required>
+    ?>'
+    required>
     <br><br>
-    <input type="checkbox" name="remember" value="remember">Remember<br>
+    <input type="checkbox" name="remember" <?php
+    if(isset($_POST['remember'])){
+        echo "checked";
+    } else {
+        if(isset($_POST['username'])){
+            echo "";
+        } else {
+            if(isset($_COOKIE['remember'])){
+                echo "checked";
+            }
+        }
+    }
+    ?>
+    >Remember<br>
     <input type="button" value="Submit" onclick="myFunction()">
 </form>
 <?php
@@ -49,6 +61,8 @@ class UserAccount
         if(strcmp($username . "_123", $_POST['password']) === 0){
             $_SESSION['username'] = $username;
             header('Location: LoginSuccess.php');
+        } else {
+            echo "Sai tài kho?n m?t kh?u";
         }
     }
     public function logOut()
