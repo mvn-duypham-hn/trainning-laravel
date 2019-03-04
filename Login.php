@@ -1,6 +1,8 @@
 <?php
 session_start();
-if(isset($_COOKIE['user'])) {header('Location: LoginSuccess.php')}; 
+if(isset($_COOKIE['status'])) {
+	header('Location: LoginSuccess.php')
+}; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +44,11 @@ if(isset($_COOKIE['user'])) {header('Location: LoginSuccess.php')};
 			</div>
 			<div class="form-group form-check">
 				<label class="form-check-label"> <input class="form-check-input"
-					type="checkbox" name="remember" value=""<?php 
-					if(isset($_COOKIE['user'])){echo 'checked';} 
+					type="checkbox" name="remember" value=""
+					<?php 
+					if(isset($_COOKIE['user'])) {
+						echo 'checked';
+					} 
 					?>
 					> Remember me
 				</label>
@@ -62,6 +67,7 @@ if (isset($_POST["submit"])) {
     
     if (($account->Check()) === true) {
         if (isset($_POST['remember'])) {
+            setcookie('status',1, time() + 1000, '/', '', 0, 0);
             setcookie('user', $account->email, time() + 1000, '/', '', 0, 0);
             setcookie('pass', $account->password, time() + 1000, '/', '', 0, 0);
         } else {

@@ -10,19 +10,14 @@ echo 'Dang nhap thanh cong!';
 
 <body>
 	<form method="POST" action="LoginSuccess.php">
-
-
-
 		<input type="submit" name="btn_submit" value="Log Out">
-
-
-
 	</form>
 <?php
 if (isset($_POST["btn_submit"])) {
     session_destroy;
+    setcookie('status',1, time() + 0, '/', '', 0, 0);
     header('Location: Login.php');
-   }
+}
 
 ?>
 </body>
