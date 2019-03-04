@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_COOKIE['user'])) {header('Location: LoginSuccess.php')}; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,17 +22,30 @@ session_start();
 			<div class="form-group">
 				<label for="email">Email:</label> <input type="email"
 					class="form-control" placeholder="Enter email" name="email"
-					value="<?php if(isset($_COOKIE['user'])){echo $_COOKIE['user'];} ?>">
+					value="
+					<?php
+                    if (isset($_COOKIE['user'])) {
+                        echo $_COOKIE['user'];
+                    }
+                    ?>"
+                    >
 			</div>
 			<div class="form-group">
 				<label for="pwd">Password:</label> <input type="password"
 					class="form-control" placeholder="Enter password" name="password"
-					value="<?php if(isset($_COOKIE['pass'])){echo $_COOKIE['pass'];} ?>">
+					value="<?php 
+					if(isset($_COOKIE['pass'])) {
+					   echo $_COOKIE['pass'];
+					} 
+					?>"
+					>
 			</div>
 			<div class="form-group form-check">
 				<label class="form-check-label"> <input class="form-check-input"
-					type="checkbox" name="remember" value=""
-					<?php if(isset($_COOKIE['user'])){echo 'checked';} ?>> Remember me
+					type="checkbox" name="remember" value=""<?php 
+					if(isset($_COOKIE['user'])){echo 'checked';} 
+					?>
+					> Remember me
 				</label>
 			</div>
 			<button type="submit" class="btn btn-primary" name="submit">Login</button>
@@ -45,14 +59,18 @@ $account = new Account();
 if (isset($_POST["submit"])) {
     $account->email = $_POST["email"];
     $account->password = $_POST["password"];
-    if (isset($_POST['remember'])) {
-        setcookie('user', $account->email, time() + 3600, '/', '', 0, 0);
-        setcookie('pass', $account->password, time() + 3600, '/', '', 0, 0);
-    } else {
-        setcookie('user', $account->email, time() - 3600, '/', '', 0, 0);
-        setcookie('pass', $account->password, time() - 3600, '/', '', 0, 0);
-    }
+    
     if (($account->Check()) === true) {
+        if (isset($_POST['remember'])) {
+            setcookie('user', $account->email, time() + 1000, '/', '', 0, 0);
+            setcookie('pass', $account->password, time() + 1000, '/', '', 0, 0);
+        } else {
+            setcookie('user', $account->email, time() + 0, '/', '', 0, 0);
+            setcookie('pass', $account->password, time() + 0, '/', '', 0, 0);
+        }
+        
+        $_SESSION['email'] = $_POST["email"];
+        $_SESSION['password'] = $_POST["password"];
 
         header('Location: LoginSuccess.php');
     } else {
