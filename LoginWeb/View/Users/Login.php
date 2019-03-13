@@ -29,9 +29,7 @@ if (isset($_COOKIE['status'])) {
                 }
                 ?>
             </font>
-
-
-        </div>
+		</div>
         <div class="form-group">
             <label for="pwd">Password:</label> <input type="password"
                                                       class="form-control" placeholder="Enter password" name="password"
