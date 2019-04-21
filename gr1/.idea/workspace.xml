@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e67f240e-0b45-4ad0-9795-a8063e42ff8a" name="Default Changelist" comment="" />
+    <list default="true" id="e67f240e-0b45-4ad0-9795-a8063e42ff8a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/cd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/job.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,15 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/SupplierFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="14" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/SupplierTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="204">
+              <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/job.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -130,8 +133,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_090646_create_cdjobs_table.php" />
         <option value="$PROJECT_DIR$/app/jpcompany.php" />
         <option value="$PROJECT_DIR$/app/jfcompany.php" />
-        <option value="$PROJECT_DIR$/app/cd.php" />
-        <option value="$PROJECT_DIR$/app/job.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_072400_create_jpcompanies_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_074108_create_jobs_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_080146_create_jfcompanies_table.php" />
@@ -144,6 +145,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_21_092216_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/CdsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/cd.php" />
+        <option value="$PROJECT_DIR$/app/job.php" />
       </list>
     </option>
   </component>
@@ -239,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="700" />
     <option name="y" value="24" />
     <option name="width" value="664" />
@@ -332,16 +335,15 @@
       <workItem from="1555483406421" duration="13309000" />
       <workItem from="1555654197776" duration="6227000" />
       <workItem from="1555662820631" duration="6510000" />
-      <workItem from="1555838101667" duration="2242000" />
+      <workItem from="1555838101667" duration="2276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30940000" />
+    <option name="totallyTimeSpent" value="30974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -410,13 +412,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/jpcompany.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/job.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
@@ -522,8 +517,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="204">
+          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
         </state>
       </provider>
     </entry>

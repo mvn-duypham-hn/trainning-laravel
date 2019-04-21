@@ -16,7 +16,7 @@ class job extends Model
 
     public function cds()
     {
-        return $this->belongsToMany('App\cd','cdjobs','cd_id','id')
+        return $this->belongsToMany('App\cd','cdjobs','cd_id','job_id');
     }
 
     public function jobfair()

@@ -10,6 +10,6 @@ class cd extends Model
     public $timestamps=false;
     public function jobs()
     {
-        return $this->belongsToMany('App\job','cdjobs','job_id','id')
+        return $this->belongsToMany('App\job','cdjobs','job_id','cd_id');
     }
 }
